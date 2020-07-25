@@ -12,7 +12,7 @@ def asa():
     return pyautogui.moveTo(200, 500, 2)
 
 
-botao_macro = Button(gui, text=' 9 ', fg='black', bg='red', command=asa, height=1, width=7).pack()
+#botao_macro = Button(gui, text=' 9 ', fg='black', bg='red', command=asa, height=1, width=7).pack()
 
 '''
 class Application(Frame):
@@ -50,17 +50,21 @@ class App(Frame):
         self.pack()
 
         self.entrythingy = Entry()
-        self.entrythingy.pack()
+        self.entrythingy.place(relx = 0.05, rely = 0.035)
 
         self.contents = StringVar()
         self.contents.set("this is a variable")
         self.entrythingy["textvariable"] = self.contents
 
-        self.entrythingy.bind('<Key-Return>',                              self.print_contents)
+        buttom_enter = Button(gui, text=' 9 ', fg='black', bg='red', command=self.print_contents,
+                       height=1, width=7)
+        buttom_enter.place(relx = 0.7, rely = 0.02)
 
-    def print_contents(self, event):
-        print("hi. contents of entry is now ---->",
-              self.contents.get())
+        self.entrythingy.bind('<Key-Return>', self.print_contents)
+
+    def print_contents(self, event = ''):
+        print("Var: ", self.contents.get())
+
 
 app = App(master=gui)
 app.mainloop()
