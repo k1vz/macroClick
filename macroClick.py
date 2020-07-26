@@ -1,11 +1,13 @@
 from tkinter import *
 import pyautogui
 
+# Creating GUI #
 gui = Tk()
 gui.title("Full test")
 gui.geometry("208x212")
 gui.configure(background="black")
 
+# Creating labels #
 txtX = Label(gui, text="Coord X:").place(relx=0.025, rely=0.03)
 txtY = Label(gui, text="Coord Y:").place(relx=0.025, rely=0.175)
 txtLag = Label(gui, text="Delay: ").place(relx=0.025, rely=0.32)
@@ -105,5 +107,6 @@ class App(Frame):
     def print_contentslag(self, event=''):
         print("Lag: ", self.contentsLag.get())
 
+
+# Runing GUI #
 gui = App(master=gui).mainloop()
-# gui.mainloop()
