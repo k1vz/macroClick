@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Pedro Duarte\PycharmProjects\macro\venv"
+VIRTUAL_ENV="C:\Users\Duarte\PyCharmProjects\pythonProject\venv\macroClick\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
